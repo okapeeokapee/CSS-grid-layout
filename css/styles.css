@@ -5,10 +5,14 @@ body{
 .container{
   display: grid;
 
-  grid-template-columns: 100px 100px 100px;
+  /* grid-template-columns: 100px 100px 100px; */
+  /* grid-template-columns: repeat(4,100px); */
+  /* grid-template-columns: repeat(auto-fill,100px); */
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: 100px 100px ;
 
-  gap: 20px 40px;
+  gap: 20px 30px;
 }
 
 .box1{
