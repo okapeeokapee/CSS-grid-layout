@@ -6,23 +6,27 @@ body{
   display: grid;
 
   /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-  grid-template-columns:100px [target-start] 100px 100px [target-end];
-  grid-template-rows: 100px 100px;
-  /* grid-auto-rows: 100px; */
+  /* grid-template-columns:100px [target-start] 100px 100px [target-end]; */
+  grid-template-columns:repeat(3, 100px);
+  grid-template-rows:repeat(4,100px);
+
+  grid-auto-flow: column dense;
+  grid-auto-columns: 100px;
   gap: 20px 30px;
 }
 
 .box1{
   background: hsl(0, 60%, 60%);
-  grid-row: 2;
-  /* grid-column: target-start / target-end; */
-  grid-column: target;
 }
 .box2{
   background: hsl(60, 60%, 60%);
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .box3{
   background: hsl(120, 60%, 60%);
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .box4{
   background: hsl(180, 60%, 60%);
